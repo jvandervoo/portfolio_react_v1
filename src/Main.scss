@@ -1,3 +1,83 @@
 @import "scss/mixins.scss";
 @import "scss/functions.scss";
 @import "scss/variables.scss";
+
+body {
+    background: $primary-color;
+    color: set-text-color($primary-color);
+    margin: 0;
+    font-family: "poppins", sans-serif;
+    line-height: 1.5;
+}
+a {
+    text-decoration: none;
+    color: set-text-color($primary-color);
+    &:hover {
+        color: $secondary-color;
+    }
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 0rem;
+    &.lg-heading {
+        margin: 0 0 5rem 0;
+        line-height: 0.6;
+        font-size: 9rem;
+        letter-spacing: -7px;
+        @include breakMd {
+            font-size: 7rem;
+            margin: 0 0 2rem 0;
+        }
+        @include breakSm {
+            font-size: 5rem;
+        }
+        .jasper {
+            letter-spacing: 0px;
+        }
+    }
+
+    &.sm-heading {
+        margin: 0 0 4rem 0;
+        @include breakMd {
+            margin: 0 0 1.5rem 0;
+        }
+    }
+}
+h6 {
+    font-size: 1rem;
+    margin: 0rem 0rem 1.5rem 0rem;
+}
+.mb-0 {
+    margin-bottom: 0;
+}
+.text-secondary {
+    color: $secondary-color;
+}
+
+//Buttons
+.btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.5rem;
+    @include easeOutQuick;
+
+    &:hover {
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+    }
+}
+
+.btn-dark {
+    @extend .btn;
+    background: darken($primary-color, 50);
+}
+
+.btn-light {
+    @extend .btn;
+    background: darken($primary-color, 50);
+}

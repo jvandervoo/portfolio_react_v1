@@ -1,8 +1,15 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import "./BurgerMenu.scss";
+import NavItem from "./NavItem";
 
 export class BurgerMenu extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentRoute: "",
+        };
+    }
+
     render() {
         return (
             <nav className="menu">
@@ -10,26 +17,11 @@ export class BurgerMenu extends Component {
                     <div className="portrait" />
                 </div>
                 <ul className="menu-nav">
-                    <li className="nav-item">
-                        <div className="nav-link">
-                            <Link to="/">Home</Link>
-                        </div>
-                    </li>
-                    <li className="nav-item">
-                        <div className="nav-link">
-                            <Link to="/about">About</Link>
-                        </div>
-                    </li>
-                    <li className="nav-item">
-                        <div className="nav-link">
-                            <Link to="/projects">Projects</Link>
-                        </div>
-                    </li>
-                    <li className="nav-item">
-                        <div className="nav-link">
-                            <Link to="/contact">Contact</Link>
-                        </div>
-                    </li>
+                    {console.log(this.props.location.pathname)}
+                    <NavItem route="/" displayName="Home" />
+                    <NavItem route="/about" displayName="About" />
+                    <NavItem route="/projects" displayName="Projects" />
+                    <NavItem route="/contact" displayName="Contact" />
                 </ul>
             </nav>
         );

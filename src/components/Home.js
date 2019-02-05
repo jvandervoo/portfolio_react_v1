@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import { FaLinkedin, FaGit } from "react-icons/fa";
 import "./Home.scss";
 
 export class Home extends Component {
     render() {
         return (
-            <main id="home">
+            <div id="home">
                 <h1 className="lg-heading">
                     <span className="jasper"> Jasper</span>
                     <br />
@@ -18,13 +19,13 @@ export class Home extends Component {
                 <h2 className="sm-heading">Front-End Developer</h2>
                 <div className="icons-container">
                     <a href="#!">
-                        <i className="fab fa-linkedin fa-2x"> </i>
+                        <FaLinkedin />
                     </a>
                     <a href="#!">
-                        <i className="fab fa-github fa-2x"> </i>
+                        <FaGit />
                     </a>
                 </div>
-            </main>
+            </div>
         );
     }
 }

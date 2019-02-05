@@ -1,18 +1,16 @@
 import React, { Component } from "react";
 import "./Main.scss";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Home from "./components/Home";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import BurgerMenu from "./components/BurgerMenu";
-import BurgerMenuButton from "./components/BurgerMenuButton";
+import { BrowserRouter as Router, Route, withRouter } from "react-router-dom";
+import { About, Home, Projects, BurgerMenu, BurgerMenuButton } from "./components";
 
 //Make navlinks an array of objects and loop to create them.
 
 class Main extends Component {
     constructor(props) {
         super(props);
-        this.state = { showMenu: false };
+        this.state = {
+            showMenu: false,
+        };
     }
 
     handleClick = () => this.setState({ showMenu: !this.state.showMenu });
