@@ -3,6 +3,6 @@
     @if (lightness($color) > 40) {
         @return #222;
     } @else {
-        @return white;
+        @return #eee;
     }
 }

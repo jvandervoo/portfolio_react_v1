@@ -19,6 +19,10 @@ a {
 }
 .site-wrapper {
     padding: 3rem;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: 50%;
     @include breakMd {
         padding: 2rem 1rem;
     }

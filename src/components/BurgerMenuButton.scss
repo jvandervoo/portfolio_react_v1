@@ -37,19 +37,3 @@
         }
     }
 }
-
-.bg-img {
-    background: linear-gradient(rgba($primary-color, 0.5), rgba($primary-color, 0.5)), $home-image;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: 85%;
-    min-height: 100vh;
-    z-index: -10;
-}
-
-.page-wrapper {
-    padding: 4rem;
-    @include breakMd {
-        padding: 1.5rem;
-    }
-}

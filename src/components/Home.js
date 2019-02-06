@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
 import "./Home.scss";
+import SocialIcons from "./SocialIcons";
 
 export class Home extends Component {
     render() {
         return (
-            <div id="home">
-                <h1 className="lg-heading">
+            <div className="test">
+                <h1 className="lg-heading" style={{ marginTop: "15vh" }}>
                     <span className="jasper"> Jasper</span>
                     <br />
                     <span className="text-secondary">
@@ -17,14 +17,7 @@ export class Home extends Component {
                     </span>
                 </h1>
                 <h2 className="sm-heading">Front-End Developer</h2>
-                <div className="icons-container">
-                    <a href="https://linkedin.com/in/jvandervoo" rel="noopener noreferrer" target="_blank">
-                        <FaLinkedin />
-                    </a>
-                    <a href="https://github.com/jvandervoo" rel="noopener noreferrer" target="_blank">
-                        <FaGithub />
-                    </a>
-                </div>
+                <SocialIcons />
             </div>
         );
     }
