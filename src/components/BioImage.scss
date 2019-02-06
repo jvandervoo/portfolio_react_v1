@@ -1,0 +1,16 @@
+@import "../Main.scss";
+
+.bio-image {
+    background: $portrait-image;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    border: 3px solid $secondary-color;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+    @include breakMd {
+        width: 150px;
+        height: 150px;
+    }
+}

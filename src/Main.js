@@ -27,7 +27,7 @@ class Main extends Component {
             <div>
                 <BurgerMenuButton showMenu={this.state.showMenu} toggleMenu={this.toggleMenu} />
                 {showMenu}
-                <div class="site-wrapper">
+                <div className="site-wrapper">
                     <Switch>
                         <Route path="/" exact component={Home} />
                         <Route path="/about/" component={About} />

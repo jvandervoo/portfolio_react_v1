@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./BurgerMenu.scss";
 import NavItem from "./NavItem";
+import BioImage from "./BioImage";
 
 export class BurgerMenu extends Component {
     render() {
@@ -8,7 +9,7 @@ export class BurgerMenu extends Component {
         return (
             <nav className="menu">
                 <div className="menu-branding">
-                    <div className="portrait" />
+                    <BioImage />
                 </div>
                 <ul className="menu-nav">
                     <NavItem route="/" displayName="Home" currentRoute={currentRoute} />
