@@ -16,6 +16,12 @@ a {
         color: $secondary-color;
     }
 }
+.site-wrapper {
+    padding: 3rem;
+    @include breakMd {
+        padding: 2rem 1rem;
+    }
+}
 
 h1,
 h2,

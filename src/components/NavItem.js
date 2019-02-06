@@ -1,14 +1,18 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "./NavItem.scss";
 
-function NavItem({ route, displayName, handleClick }) {
+function NavItem({ route, displayName, currentRoute }) {
+    var current = route === currentRoute ? "current" : "";
     return (
-        <li className="nav-item" onClick={handleClick}>
+        <li className="nav-item">
             <div className="nav-link">
-                <Link to={route}>{displayName}</Link>
+                <Link className={current} to={route}>
+                    {displayName}
+                </Link>
             </div>
         </li>
     );
 }
 
-export default withRouter(NavItem);
+export default NavItem;

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { FaLinkedin, FaGit } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import "./Home.scss";
 
 export class Home extends Component {
@@ -18,11 +18,11 @@ export class Home extends Component {
                 </h1>
                 <h2 className="sm-heading">Front-End Developer</h2>
                 <div className="icons-container">
-                    <a href="#!">
+                    <a href="https://linkedin.com/in/jvandervoo" rel="noopener noreferrer" target="_blank">
                         <FaLinkedin />
                     </a>
-                    <a href="#!">
-                        <FaGit />
+                    <a href="https://github.com/jvandervoo" rel="noopener noreferrer" target="_blank">
+                        <FaGithub />
                     </a>
                 </div>
             </div>

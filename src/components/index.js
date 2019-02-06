@@ -3,5 +3,6 @@ import About from "./About";
 import Projects from "./Projects";
 import BurgerMenu from "./BurgerMenu";
 import BurgerMenuButton from "./BurgerMenuButton";
+import NotFound from "./NotFound";
 
-export { About, Home, Projects, BurgerMenu, BurgerMenuButton };
+export { About, Home, Projects, BurgerMenu, BurgerMenuButton, NotFound };
