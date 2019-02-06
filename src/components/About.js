@@ -14,9 +14,9 @@ export class About extends Component {
                     <div className="bio">
                         <h3 className="text-secondary">JASPER VAN DER VOO</h3>
                         <p>
-                            Hey. I'm a Front End Developer. I enjoy making vivid, seamless interfaces. I've been working
-                            for a year now since I completed my BSC majoring in Computer Science in 2017. I've worked a
-                            lot with WordPress since then, making many fully responsive web sites.
+                            Heya. I'm a Front End Developer. I enjoy making vivid, seamless interfaces. I've been
+                            working for a year now since I completed my BSC majoring in Computer Science in 2017. I've
+                            worked a lot with WordPress since then, making many fully responsive web sites.
                         </p>
                         <p>
                             In my spare time I like to drink too much coffee, eat really spicy food and work out. I also
