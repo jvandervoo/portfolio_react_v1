@@ -36,7 +36,7 @@
 
     //Branding Side
     &-branding {
-        background: rgba(lighten($primary-color, 10), 0.9);
+        background: rgba(lighten($primary-color, 3), 1);
 
         @include breakMd {
             height: 25vh;
