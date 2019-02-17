@@ -1,37 +1,38 @@
 import React, { Component } from "react";
+import { FaGithub, FaEye } from "react-icons/fa";
 
 export default class Projectlist extends Component {
     constructor(props) {
         super(props);
         this.state = {
             projects: [],
-            isLoaded: false,
+            loaded: false,
             error: null,
         };
     }
-    componentDidMount() {
-        fetch("https://api.jaspervoo.com/projects")
-            .then(res => res.json())
-            .then(
-                res => {
-                    this.setState({
-                        projects: res,
-                        isLoaded: true,
-                    });
-                },
-                error => {
-                    this.setState({
-                        isLoaded: true,
-                        error,
-                    });
-                }
-            );
+
+    async componentDidMount() {
+        let res, projects;
+        try {
+            res = await fetch("https://api.jaspervoo.com/projects");
+            projects = await res.json();
+            this.setState({
+                projects: projects,
+                loaded: true,
+            });
+        } catch (error) {
+            this.setState({
+                loaded: true,
+                error,
+            });
+        }
     }
+
     render() {
-        const { error, projects, isLoaded } = this.state;
+        const { error, projects, loaded } = this.state;
         if (error) {
             return <div>Error: {error.message}</div>;
-        } else if (!isLoaded) {
+        } else if (!loaded) {
             return <div>Loading....</div>; //Add a cool loading animation!
         } else {
             return (
@@ -39,14 +40,20 @@ export default class Projectlist extends Component {
                     {projects.map(project => (
                         <div key={project.id} className="item">
                             <a href={`details/${project.id}`}>
+                                v
                                 <img src={project.img} alt="Project" />
                             </a>
                             <a href="#!" className="btn-light">
-                                {project.title}
+                                <FaEye className="project-icon-eye" />
+                                {`Details on: ${project.title}`}
                             </a>
-                            <a href="#!" className="btn-dark" target="_blank">
-                                <i className="fa fa-github" /> Github
-                            </a>
+                            {project.git !== "" ? (
+                                <a href={project.git} className="btn-dark" rel="noopener noreferrer" target="_blank">
+                                    <FaGithub className="project-icon-git" /> View on Github
+                                </a>
+                            ) : (
+                                ""
+                            )}
                         </div>
                     ))}
                 </div>
