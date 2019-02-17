@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { FaGithub, FaEye } from "react-icons/fa";
+import "./ProjectList.scss";
 
 export default class Projectlist extends Component {
     constructor(props) {
@@ -40,16 +41,15 @@ export default class Projectlist extends Component {
                     {projects.map(project => (
                         <div key={project.id} className="item">
                             <a href={`details/${project.id}`}>
-                                v
                                 <img src={project.img} alt="Project" />
                             </a>
                             <a href="#!" className="btn-light">
-                                <FaEye className="project-icon-eye" />
+                                <FaEye className="button-icon" />
                                 {`Details on: ${project.title}`}
                             </a>
                             {project.git !== "" ? (
                                 <a href={project.git} className="btn-dark" rel="noopener noreferrer" target="_blank">
-                                    <FaGithub className="project-icon-git" /> View on Github
+                                    <FaGithub className="button-icon" /> View on Github
                                 </a>
                             ) : (
                                 ""

@@ -1,0 +1,33 @@
+@import "../Main.scss";
+
+//Contact page
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top: 1rem;
+
+    div {
+        font-size: 1.5rem;
+        border: 2px solid #fff;
+        padding: 1rem 2rem;
+        margin-bottom: 3rem;
+        @include easeOutQuick;
+        max-width: 500px;
+        @include breakSm {
+            font-size: 1.2rem;
+            padding: 0.5rem 1.5rem;
+            border-width: 1px;
+        }
+        &:hover {
+            cursor: pointer;
+            background: $secondary-color;
+            color: set-text-color($secondary-color);
+
+            span {
+                color: set-text-color($secondary-color);
+            }
+        }
+    }
+}

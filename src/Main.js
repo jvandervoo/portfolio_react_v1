@@ -3,6 +3,7 @@ import "./Main.scss";
 import { Route, Switch, withRouter } from "react-router-dom";
 import { About, Home, Projects, BurgerMenu, BurgerMenuButton, NotFound } from "./components";
 import BackgroundImage from "./assets/imgs/planes-3.jpg";
+import Contact from "./components/Contact";
 
 class Main extends Component {
     constructor(props) {
@@ -36,6 +37,7 @@ class Main extends Component {
                         <Route path="/" exact component={Home} />
                         <Route path="/about/" component={About} />
                         <Route path="/projects/" component={Projects} />
+                        <Route path="/contact/" component={Contact} />
                         <Route component={NotFound} />
                     </Switch>
                 </div>

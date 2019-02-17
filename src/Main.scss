@@ -71,12 +71,13 @@ h6 {
 
 //Buttons
 .btn {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     padding: 0.5rem 1rem;
     border: 0;
     margin-bottom: 0.5rem;
     @include easeOutQuick;
-
     &:hover {
         background: $secondary-color;
         color: set-text-color($secondary-color);
