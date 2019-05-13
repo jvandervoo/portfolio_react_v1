@@ -27,7 +27,7 @@ class Main extends Component {
         const backgroundStyle = {
             backgroundImage: this.state.showBackground ? `url(${BackgroundImage})` : "",
         };
-        const showMenu = this.state.showMenu ? <BurgerMenu currentRoute={this.props.location.pathname} /> : "";
+        const showMenu = this.state.showMenu ? <BurgerMenu toggleMenu={this.toggleMenu} currentRoute={this.props.location.pathname} /> : "";
         return (
             <div>
                 <BurgerMenuButton showMenu={this.state.showMenu} toggleMenu={this.toggleMenu} />

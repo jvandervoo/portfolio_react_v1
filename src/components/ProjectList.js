@@ -31,33 +31,29 @@ export default class Projectlist extends Component {
 
     render() {
         const { error, projects, loaded } = this.state;
-        if (error) {
-            return <div>Error: {error.message}</div>;
-        } else if (!loaded) {
-            return <div>Loading....</div>; //Add a cool loading animation!
-        } else {
-            return (
-                <div>
-                    {projects.map(project => (
-                        <div key={project.id} className="item">
-                            <a href={`details/${project.id}`}>
-                                <img src={project.img} alt="Project" />
-                            </a>
-                            <a href="#!" className="btn-light">
-                                <FaEye className="button-icon" />
-                                {`Details on: ${project.title}`}
-                            </a>
-                            {project.git !== "" ? (
-                                <a href={project.git} className="btn-dark" rel="noopener noreferrer" target="_blank">
-                                    <FaGithub className="button-icon" /> View on Github
-                                </a>
-                            ) : (
-                                ""
-                            )}
-                        </div>
-                    ))}
+
+        if (error) return <div>Error: {error.message}</div>;
+
+        return !loaded ? ( <div>Loading....</div> /* Add a cool loading animation! */ ) :
+        <div>
+            { projects.map(project => (
+                <div key={project.id} className="item">
+                    <a href={`details/${project.id}`}>
+                        <img src={project.img} alt="Project" />
+                    </a>
+                    <a href="#!" className="btn-light">
+                        <FaEye className="button-icon" />
+                        {`Details`}
+                    </a>
+                    {project.git !== "" ? (
+                        <a href={project.git} className="btn-dark" rel="noopener noreferrer" target="_blank">
+                            <FaGithub className="button-icon" />Github
+                        </a>
+                    ) : (
+                        ""
+                    )}
                 </div>
-            );
-        }
+            ))}
+        </div>
     }
 }

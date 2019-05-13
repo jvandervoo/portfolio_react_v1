@@ -21,7 +21,7 @@ export class About extends Component {
                         <p>
                             In my spare time I like to drink too much coffee, eat really spicy food and work out. I also
                             go to weekly coding tutorials in order to expand my programming knowledge. On the off chance
-                            that you ride a unicycle, or have had scoliosis surgery, please do let me know, I'd love to
+                            that you ride a unicycle, or have had spinal fusion surgery, please do let me know, I'd love to
                             chat about it.
                         </p>
                     </div>

@@ -11,21 +11,23 @@ export class Jobs extends Component {
         this.state = {
             jobs: [
                 {
-                    company: "Hi Ho Design",
-                    period: "Current",
+                    company: "Hi Ho Marketing",
+                    period: "Apr 2018 - Apr 2019",
                     jobRole: "Front End Developer",
                     description: (
                         <>
-                            <p>
+                            <ul>
+                                <li>
                                 Responsible for creating and deploying fully responsive, cross-browser compatible
                                 websites on cloud based containers running Linux. I have worked primarily with WordPress
                                 and have become comfortable with using PHP to extend the functionality of WordPress and
                                 popular plugins when bespoke solutions are needed.
-                            </p>
-                            <p>
+                                </li>
+                                <li>
                                 In charge of SEO formulating and implementing SEO strategies with proven results that
                                 increase conversions.
-                            </p>
+                                </li>
+                                </ul>
                         </>
                     ),
                 },
