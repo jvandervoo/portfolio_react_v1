@@ -1,67 +1,65 @@
 @import "../Main.scss"; // Menu Overlay
 .menu {
-    position: fixed;
-    width: 100%;
-    display:flex;
-    &-wrapper{
-        width: 100%;
-        background: rgba(darken($primary-color, 5), 0.5);
-        cursor: pointer;
-    }
-    &-nav {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        min-width: 350px;
-        max-width: 500px;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        list-style: none;
-        background: rgba(darken($primary-color, 5), 1);
-
-    }
-    .nav {
-        &-item {
-            margin-left: 1.5em;
-            transition: 0.5s $t1;
-            @include breakSm {
-                margin-left: 1em;
-            }
-            &.current{
-                color: $secondary-color;
-            }
-        }
-        &-link {
-            display: inline-block;
-            position: relative;
-            font-size: 3rem;
-            line-height: 1em;
-            text-transform: uppercase;
-            font-weight: 700;
-            margin-bottom: 1em;
-            color: set-text-color($primary-color);
-            text-decoration: none;
-            cursor: pointer;
-            :after {
-                transition: width $t1;
-                width:0%;
-                content: "";
-                height: 3px;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                background-color: $secondary-color;
-            }
-            &:hover {
-                color: $secondary-color;
-                :after {
-                    width: 100%;
-    
-                }
-            }
-        }
-    }
+	position: fixed;
+	width: 100%;
+	display: flex;
+	&-wrapper {
+		width: 100%;
+		background: rgba(darken($primary-color, 5), 0.5);
+		cursor: pointer;
+	}
+	&-nav {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		min-width: 350px;
+		max-width: 500px;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		height: 100vh;
+		list-style: none;
+		background: rgba(darken($primary-color, 5), 1);
+	}
+	.nav {
+		&-item {
+			margin-left: 1.5em;
+			transition: 0.5s $t1;
+			@include breakSm {
+				margin-left: 1em;
+			}
+			&.current {
+				color: $secondary-color;
+			}
+		}
+		&-link {
+			display: inline-block;
+			position: relative;
+			font-size: 3rem;
+			line-height: 1em;
+			text-transform: uppercase;
+			font-weight: 700;
+			margin-bottom: 1em;
+			color: set-text-color($primary-color);
+			text-decoration: none;
+			cursor: pointer;
+			:after {
+				transition: width $t1;
+				width: 0%;
+				content: "";
+				height: 3px;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				background-color: $secondary-color;
+			}
+			&:hover {
+				color: $secondary-color;
+				:after {
+					width: 100%;
+				}
+			}
+		}
+	}
 }

@@ -3,95 +3,140 @@
 @import "scss/variables.scss";
 
 body {
-    background: $primary-color;
-    color: set-text-color($primary-color);
-    margin: 0;
-    padding: 0;
-    font-family: "poppins", sans-serif;
-    line-height: 1.5;
+	background: $primary-color;
+	color: set-text-color($primary-color);
+	margin: 0;
+	padding: 0;
+	font-family: "poppins", sans-serif;
+	line-height: 1.5;
 }
 a {
-    text-decoration: none;
-    color: set-text-color($primary-color);
-    &:hover {
-        color: $secondary-color;
-    }
+	text-decoration: none;
+	color: set-text-color($primary-color);
+	&:hover {
+		color: $secondary-color;
+	}
 }
 .site-wrapper {
-    transition: 0.5s $t1;
-    padding: 3rem;
-    min-height: 100vh;
-    box-sizing: border-box;
-    background-size: cover;
-    background-position: 50%;
-    @include breakMd {
-        padding: 2rem 1rem;
-    }
+	transition: 0.5s $t1;
+	padding: 3rem;
+	min-height: 100vh;
+	box-sizing: border-box;
+	background-size: cover;
+	background-position: 50%;
+	@include breakMd {
+		padding: 2rem 1rem;
+	}
 }
 
 h1,
 h2,
 h3 {
-    transition: 0.5s $t1;
-    font-weight: 700;
-    font-size: 1.5rem;
-    margin-top: 0rem;
-    &.lg-heading {
-        margin: 0 0 5rem 0;
-        line-height: 0.6;
-        font-size: 9rem;
-        letter-spacing: -7px;
-        @include breakMd {
-            font-size: 7rem;
-            margin: 0 0 2rem 0;
-        }
-        @include breakSm {
-            font-size: 5rem;
-        }
-        .jasper {
-            letter-spacing: 0px;
-        }
-    }
+	transition: 0.5s $t1;
+	font-weight: 700;
+	font-size: 1.5rem;
+	margin-top: 0rem;
+	&.lg-heading {
+		margin: 0 0 5rem 0;
+		line-height: 0.6;
+		font-size: 9rem;
+		letter-spacing: -7px;
+		@include breakMd {
+			font-size: 7rem;
+			margin: 0 0 2rem 0;
+		}
+		@include breakSm {
+			font-size: 5rem;
+		}
+		.jasper {
+			letter-spacing: 0px;
+		}
+	}
 
-    &.sm-heading {
-        margin: 0 0 4rem 0;
-        @include breakMd {
-            margin: 0 0 1.5rem 0;
-        }
-    }
+	&.sm-heading {
+		margin: 0 0 4rem 0;
+		@include breakMd {
+			margin: 0 0 1.5rem 0;
+		}
+	}
 }
 h6 {
-    font-size: 1rem;
-    margin: 0rem 0rem 1.5rem 0rem;
+	font-size: 1rem;
+	margin: 0rem 0rem 1.5rem 0rem;
 }
 .mb-0 {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 .text-secondary {
-    color: $secondary-color;
+	color: $secondary-color;
 }
 
 //Buttons
 .btn {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0.5rem 1rem;
-    border: 0;
-    margin-bottom: 0.5rem;
-    @include easeOutQuick;
-    &:hover {
-        background: $secondary-color;
-        color: set-text-color($secondary-color);
-    }
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 0.5rem 1rem;
+	border: 0;
+	margin-bottom: 0.5rem;
+	@include easeOutQuick;
+	&:hover {
+		background: $secondary-color;
+		color: set-text-color($secondary-color);
+	}
 }
 
 .btn-dark {
-    @extend .btn;
-    background: darken($primary-color, 50);
+	@extend .btn;
+	background: darken($primary-color, 50);
 }
 
 .btn-light {
-    @extend .btn;
-    background: darken($primary-color, 50);
+	@extend .btn;
+	background: darken($primary-color, 50);
+}
+
+/* Burger Menu Enter Animationm */
+.example-enter {
+	.menu-wrapper {
+		opacity: 0;
+	}
+	.menu-nav {
+		max-width: 0px;
+		min-width: 0px;
+	}
+}
+
+.example-enter.example-enter-active {
+	.menu-wrapper {
+		opacity: 1;
+		transition: $t1;
+	}
+	.menu-nav {
+		max-width: $menu-max-width;
+		min-width: $menu-min-width;
+		transition: $t1;
+	}
+}
+
+.example-leave {
+	.menu-wrapper {
+		opacity: 1;
+	}
+	.menu-nav {
+		max-width: $menu-max-width;
+		min-width: $menu-min-width;
+	}
+}
+
+.example-leave.example-leave-active {
+	.menu-wrapper {
+		opacity: 0;
+		transition: $t1;
+	}
+	.menu-nav {
+		max-width: 0px;
+		min-width: 0px;
+		transition: $t1;
+	}
 }
