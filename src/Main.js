@@ -28,18 +28,17 @@ class Main extends Component {
 
 	render() {
 		const backgroundStyle = {
-			backgroundImage: this.state.showBackground ? `url(${BackgroundImage})` : ""
+			backgroundImage: `url(${BackgroundImage})`
 		};
-		const showMenu = this.state.showMenu ? (
-			<BurgerMenu toggleMenu={this.toggleMenu} currentRoute={this.props.location.pathname} />
-		) : (
-			""
-		);
+		const { showMenu } = this.state;
+
 		return (
 			<div>
-				<BurgerMenuButton toggleMenu={this.toggleMenu} />
+				<BurgerMenuButton active={showMenu} toggleMenu={this.toggleMenu} />
 				<CSSTransitionGroup transitionName="example" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
-					{showMenu}
+					{showMenu && (
+						<BurgerMenu toggleMenu={this.toggleMenu} currentRoute={this.props.location.pathname} />
+					)}
 				</CSSTransitionGroup>
 
 				<div className={`site-wrapper`} style={backgroundStyle}>
