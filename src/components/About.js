@@ -7,7 +7,11 @@ export class About extends Component {
 	render() {
 		return (
 			<div className="about-wrapper">
-				<h1 className="lg-heading">About</h1>
+				<h1 className="lg-heading">
+					About
+					<br />
+					<span className="text-secondary">Myself</span>
+				</h1>
 				<h2 className="sm-heading">Here's some info about me and why I'm here</h2>
 				<div className="about-info">
 					<BioImage />

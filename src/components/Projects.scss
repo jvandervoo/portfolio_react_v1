@@ -1,14 +1,14 @@
 @import "../Main.scss";
 .projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1.5rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 2.5em;
+	justify-items: center;
+	@include breakMd {
+		grid-template-columns: 1fr 1fr;
+	}
 
-    @include breakMd {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    @include breakSm {
-        grid-template-columns: 1fr;
-    }
+	@include breakSm {
+		grid-template-columns: 1fr;
+	}
 }

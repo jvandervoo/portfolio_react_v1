@@ -44,6 +44,10 @@
 			color: set-text-color($primary-color);
 			text-decoration: none;
 			cursor: pointer;
+			transition: 0.5s $t1;
+			@include breakSm {
+				font-size: 2rem;
+			}
 			:after {
 				transition: width $t1;
 				width: 0%;

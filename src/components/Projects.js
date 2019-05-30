@@ -7,12 +7,12 @@ export class Projects extends Component {
 		return (
 			<main id="work">
 				<h1 className="lg-heading">
-					My <span className="text-secondary">Work</span>
+					My <br />
+					<span className="text-secondary">Work</span>
 				</h1>
 				<h2 className="sm-heading">Check out some of my projects</h2>
-				<div className="projects">
-					<Projectlist />
-				</div>
+
+				<Projectlist />
 			</main>
 		);
 	}

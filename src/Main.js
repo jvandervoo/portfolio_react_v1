@@ -27,10 +27,10 @@ class Main extends Component {
 	toggleMenu = () => this.setState({ showMenu: !this.state.showMenu });
 
 	render() {
+		const { showMenu, showBackground } = this.state;
 		const backgroundStyle = {
-			backgroundImage: `url(${BackgroundImage})`
+			backgroundImage: showBackground ? `url(${BackgroundImage})` : ""
 		};
-		const { showMenu } = this.state;
 
 		return (
 			<div>
