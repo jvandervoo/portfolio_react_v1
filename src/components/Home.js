@@ -16,7 +16,7 @@ export class Home extends Component {
 						<span className="voo"> voo</span>
 					</span>
 				</h1>
-				<h2 className="sm-heading">Front-End Developer</h2>
+				<h2 className="sm-heading">Front end developer</h2>
 				<SocialIcons />
 			</div>
 		);
