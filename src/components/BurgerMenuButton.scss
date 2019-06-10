@@ -1,15 +1,20 @@
 @import "../Main.scss";
 .menu-btn {
-	position: absolute;
+	position: fixed;
 	z-index: 3;
-	right: 2rem;
-	top: 2rem;
+	right: 0;
+	top: 0;
+	padding: 1rem;
+	background: rgba(darken($primary-color, 5), 1);
+
 	cursor: pointer;
 	@include easeOutQuick;
-
+	@include breakMd {
+		padding: 1rem;
+	}
 	.btn-line {
 		width: 28px;
-		height: 3px;
+		height: 2px;
 		margin: 0 0 5px 0;
 		background: set-text-color($primary-color);
 		@include easeOutQuick;
@@ -22,7 +27,7 @@
 		.btn-line {
 			//First line - Rotate
 			&:nth-child(1) {
-				transform: translate(0px, 8px) rotate(-45deg);
+				transform: translate(0px, 7px) rotate(-45deg);
 			}
 
 			//Second line - Hide
@@ -32,7 +37,7 @@
 
 			//Third line - Rotate
 			&:nth-child(3) {
-				transform: translate(0px, -8px) rotate(45deg);
+				transform: translate(0px, -7px) rotate(45deg);
 			}
 		}
 	}
