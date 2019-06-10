@@ -33,9 +33,7 @@ export class ProjectDetails extends Component {
 	}
 	render() {
 		const { error, project, loaded } = this.state;
-		console.log(project);
 		const { date, title, description, git, img } = project;
-		console.log(project.date);
 		return !loaded ? (
 			<h1>Loading project...</h1>
 		) : (
@@ -49,8 +47,8 @@ export class ProjectDetails extends Component {
 						<img src={img} />
 					</div>
 					<div className="project-">
-						<h1>{title}</h1>
-						<h2>{date}</h2>
+						<h1 className="title">{title}</h1>
+						<h2 className="date">{date}</h2>
 						<p>{description}</p>
 					</div>
 				</div>

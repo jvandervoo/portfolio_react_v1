@@ -9,7 +9,6 @@ export default function Contact() {
 				<br />
 				<span className="text-secondary"> Me</span>
 			</h1>
-			<h2 className="sm-heading">Get in touch with me</h2>
 			<div className="boxes">
 				<a href="mailto:jasper.voo@gmail.com">
 					<div>

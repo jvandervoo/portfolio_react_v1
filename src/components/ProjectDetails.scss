@@ -1,14 +1,35 @@
 @import "../scss/variables.scss";
 @import "../scss/functions.scss";
+@import "../scss/mixins.scss";
 
 .single-project-wrapper {
 	display: flex;
 	padding: 2rem;
-	background: rgba(white, 0.1);
+	background: lighten($primary-color, 5);
+	@include breakMd {
+		flex-direction: column;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 	.project-image {
 		margin-right: 3rem;
+		@include breakMd {
+			margin: auto;
+			margin-bottom: 1rem;
+		}
 		img {
 			width: 300px;
 		}
+	}
+	.title {
+		font-size: 3rem;
+		line-height: 1em;
+		margin-bottom: 0.5rem;
+	}
+	.date {
+		font-size: 1.3rem;
+		line-height: 1em;
+		font-weight: 500;
+		margin-bottom: 1.5rem;
 	}
 }

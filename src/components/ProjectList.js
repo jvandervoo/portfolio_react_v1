@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-//import { FaGithub, FaEye } from "react-icons/fa";
 import "./ProjectList.scss";
-import js from "../assets/imgs/js.png";
 export default class Projectlist extends Component {
 	constructor(props) {
 		super(props);
@@ -50,9 +48,8 @@ export default class Projectlist extends Component {
 
 	render() {
 		const { error, projects, loaded } = this.state;
-
 		if (error) return <div>Error: {error.message}</div>;
-
+		console.log(loaded ? projects : "Not Loaded");
 		return !loaded ? (
 			<div>Loading....</div> /* Add a cool loading animation! (or some shiny placeholder stuff) */
 		) : (
@@ -60,41 +57,14 @@ export default class Projectlist extends Component {
 				{projects.map(project => (
 					<div key={project.id} className="item">
 						<a href={`/projects/details/${project.id}`}>
-							<div className="project-image" style={{ backgroundImage: `url(${project.img})` }}>
-								<div className="project-overlay">
-									<div className="project-overlay-header">
-										<span class="title">{project.title}</span>
-										<span class="date">{project.date}</span>
-									</div>
-									{/* <div className="spacer">
-										<div className="dot top">•</div>
-										<div className="dot mid">•</div>
-										<div className="dot bot">•</div>
-									</div> */}
-									<div className="project-overlay-body">
-										<p>{project.shortDescription}</p>
-									</div>
-									{/* <div className="spacer">
-										<div className="dot top">•</div>
-										<div className="dot mid">•</div>
-										<div className="dot bot">•</div>
-									</div> */}
-									{/* <div className="project-overlay-languages">
-										<img className="language" src={js} alt="javascript" />
-									</div> */}
+							<div className="project-image" style={{ backgroundImage: `url(${project.img})` }} />
+							<div className="project-overlay">
+								<div className="project-overlay-header">
+									<span className="title">{project.title}</span>
+									<span className="icon-more">>></span>
 								</div>
 							</div>
 						</a>
-						{/* <a href="#!" className="btn-light">
-							<FaEye className="button-icon" />
-							{`Details`}
-						</a> */}
-						{/* {project.git !== "" && (
-							<a href={project.git} className="btn-dark" rel="noopener noreferrer" target="_blank">
-								<FaGithub className="button-icon" />
-								Github
-							</a>
-						)} */}
 					</div>
 				))}
 			</div>

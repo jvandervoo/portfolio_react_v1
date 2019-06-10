@@ -12,7 +12,6 @@ export class About extends Component {
 					<br />
 					<span className="text-secondary">Myself</span>
 				</h1>
-				<h2 className="sm-heading">Here's some info about me and why I'm here</h2>
 				<div className="about-info">
 					<BioImage />
 					<div className="bio">
