@@ -2,10 +2,10 @@
 .projects {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 2.5em;
-	justify-items: center;
+	grid-gap: 2rem;
 	@include breakMd {
 		grid-template-columns: 1fr 1fr;
+		grid-gap: 1rem;
 	}
 
 	@include breakSm {

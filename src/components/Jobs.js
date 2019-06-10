@@ -16,18 +16,16 @@ export class Jobs extends Component {
 					jobRole: "Front End Developer",
 					description: (
 						<>
-							<ul>
-								<li>
-									Responsible for creating and deploying fully responsive, cross-browser compatible
-									websites on cloud based containers running Linux. I have worked primarily with
-									WordPress and have become comfortable with using PHP to extend the functionality of
-									WordPress and popular plugins when bespoke solutions are needed.
-								</li>
-								<li>
-									In charge of SEO formulating and implementing SEO strategies with proven results
-									that increase conversions.
-								</li>
-							</ul>
+							<p>
+								Responsible for creating and deploying fully responsive, cross-browser compatible
+								websites on cloud based containers running Linux. I have worked primarily with WordPress
+								and have become comfortable with using PHP to extend the functionality of WordPress and
+								popular plugins when bespoke solutions are needed.
+							</p>
+							<p>
+								In charge of SEO formulating and implementing SEO strategies with proven results that
+								increase conversions.
+							</p>
 						</>
 					)
 				},
@@ -37,16 +35,7 @@ export class Jobs extends Component {
 					jobRole: "Junior Software Developer",
 					description: (
 						<>
-							<ul>
-								<li>
-									Converted legacy Delphi programs to a web based format using Smart Mobile Studio
-								</li>
-								<li>Committed to our team environment with the ability to undergo individual tasks</li>
-								<li>
-									Used core programming principles which help when writing clean, understandable,
-									maintainable code.
-								</li>
-							</ul>
+							<p>Converted legacy Delphi programs to a web based format using Smart Mobile Studio</p>
 						</>
 					)
 				},
@@ -57,10 +46,8 @@ export class Jobs extends Component {
 					description: (
 						<>
 							<p>
-								I mean, I didn't actually work here, but I did do a lot of coding practise. There are a
-								few things the university could improve on, such as providing more team projects and
-								teaching more about how to work on large scale projects, but one must give credit where
-								credit is due.
+								This is where I learned a lot about Computer Science history and many basic coding
+								principles.
 							</p>
 						</>
 					)
