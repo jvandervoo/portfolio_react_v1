@@ -17,7 +17,7 @@ class Main extends Component {
 
 	componentDidUpdate(prevProps) {
 		if (this.props.location.pathname !== prevProps.location.pathname) {
-			this.toggleMenu();
+			if (this.state.showMenu) this.toggleMenu();
 			this.setState({
 				showBackground: this.props.location.pathname === "/" ? true : false
 			});
