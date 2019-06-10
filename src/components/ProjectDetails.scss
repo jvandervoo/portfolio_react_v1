@@ -1,0 +1,14 @@
+@import "../scss/variables.scss";
+@import "../scss/functions.scss";
+
+.single-project-wrapper {
+	display: flex;
+	padding: 2rem;
+	background: rgba(white, 0.1);
+	.project-image {
+		margin-right: 3rem;
+		img {
+			width: 300px;
+		}
+	}
+}

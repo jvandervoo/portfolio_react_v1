@@ -7,7 +7,7 @@ export class Home extends Component {
 		return (
 			<div className="test">
 				<h1 className="lg-heading" style={{ marginTop: "15vh" }}>
-					<span className="jasper"> Jasper</span>
+					<span className="jasper">Jasper</span>
 					<br />
 					<span className="text-secondary">
 						<span className="van">van</span>

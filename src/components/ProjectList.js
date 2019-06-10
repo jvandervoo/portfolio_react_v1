@@ -66,22 +66,22 @@ export default class Projectlist extends Component {
 										<span class="title">{project.title}</span>
 										<span class="date">{project.date}</span>
 									</div>
-									<div className="spacer">
+									{/* <div className="spacer">
 										<div className="dot top">•</div>
 										<div className="dot mid">•</div>
 										<div className="dot bot">•</div>
-									</div>
+									</div> */}
 									<div className="project-overlay-body">
 										<p>{project.shortDescription}</p>
 									</div>
-									<div className="spacer">
+									{/* <div className="spacer">
 										<div className="dot top">•</div>
 										<div className="dot mid">•</div>
 										<div className="dot bot">•</div>
-									</div>
-									<div className="project-overlay-languages">
+									</div> */}
+									{/* <div className="project-overlay-languages">
 										<img className="language" src={js} alt="javascript" />
-									</div>
+									</div> */}
 								</div>
 							</div>
 						</a>

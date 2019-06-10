@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Main.scss";
 import { Route, Switch, withRouter } from "react-router-dom";
-import { About, Home, Projects, BurgerMenu, BurgerMenuButton, Details, NotFound } from "./components";
+import { About, Home, Projects, BurgerMenu, BurgerMenuButton, ProjectDetails, NotFound } from "./components";
 import BackgroundImage from "./assets/imgs/planes-3.jpg";
 import Contact from "./components/Contact";
 import { CSSTransitionGroup } from "react-transition-group"; // ES6
@@ -47,7 +47,7 @@ class Main extends Component {
 						<Route path="/about/" component={About} />
 						<Route path="/projects/" exact component={Projects} />
 						<Route path="/contact/" component={Contact} />
-						<Route path="/projects/details/" component={Details} />
+						<Route path="/projects/details/" component={ProjectDetails} />
 						<Route component={NotFound} />
 					</Switch>
 				</div>
