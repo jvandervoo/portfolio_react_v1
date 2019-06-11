@@ -6,9 +6,9 @@ export default function Job({ id, company, period, jobRole, description }) {
 			<h3>
 				{company}
 				<br />
-				{period}
 			</h3>
-			<h6 className="text-secondary">{jobRole}</h6>
+			<h6 className="text-secondary mb-0">{jobRole}</h6>
+			<h6>{period}</h6>
 			{description /* No enclosing jsx to allow custom description format */}
 		</div>
 	);

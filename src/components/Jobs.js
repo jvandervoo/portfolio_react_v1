@@ -12,25 +12,22 @@ export class Jobs extends Component {
 			jobs: [
 				{
 					company: "Hi Ho Marketing",
-					period: "Apr 2018 - Apr 2019",
+					period: "Apr 2018 - Jun 2019",
 					jobRole: "Front End Developer",
 					description: (
 						<>
 							<p>
 								Responsible for creating and deploying fully responsive, cross-browser compatible
-								websites on cloud based containers running Linux. I have worked primarily with WordPress
-								and have become comfortable with using PHP to extend the functionality of WordPress and
-								popular plugins when bespoke solutions are needed.
+								websites. I have worked primarily with WordPress and have become comfortable with using
+								PHP to extend the functionality of WordPress and popular plugins when bespoke solutions
+								are needed.
 							</p>
-							<p>
-								In charge of SEO formulating and implementing SEO strategies with proven results that
-								increase conversions.
-							</p>
+							<p>Formulated and implemented SEO strategies with proven results.</p>
 						</>
 					)
 				},
 				{
-					company: "NumberWorks'nWords",
+					company: "NumberWorks",
 					period: "Jan - Apr 2018",
 					jobRole: "Junior Software Developer",
 					description: (

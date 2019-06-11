@@ -1,14 +1,14 @@
 @import "../Main.scss";
 
 .bio-image {
-    background-position: center;
-    background-size: cover;
-    border-radius: 50%;
-    margin: auto;
-    width: 250px;
-    height: 250px;
-    @include breakMd {
-        width: 150px;
-        height: 150px;
-    }
+	background-position: center;
+	background-size: cover;
+	border-radius: 50%;
+	margin: auto;
+	width: 250px;
+	height: 250px;
+	@include breakMd {
+		width: 200px;
+		height: 200px;
+	}
 }
