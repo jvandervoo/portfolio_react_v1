@@ -3,6 +3,7 @@
 	position: fixed;
 	width: 100%;
 	display: flex;
+	z-index: 99;
 	&-wrapper {
 		width: 100%;
 		background: rgba(darken($primary-color, 5), 0.5);
