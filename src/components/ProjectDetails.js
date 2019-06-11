@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./ProjectDetails.scss";
-
+import { FaGithub } from "react-icons/fa";
 export class ProjectDetails extends Component {
 	constructor(props) {
 		super(props);
@@ -35,6 +35,7 @@ export class ProjectDetails extends Component {
 		const { error, project, loaded } = this.state;
 		const { date, title, description, git, img, link } = project;
 		console.log(loaded ? project : "");
+		if (error) return <h1>{error}</h1>;
 		return !loaded ? (
 			<div>
 				<h1 className="lg-heading">
@@ -50,16 +51,23 @@ export class ProjectDetails extends Component {
 				</h1>
 				<div className="single-project-wrapper">
 					<div className="project-image">
-						<img src={img} />
+						<img alt="Project Snapshot" src={img} />
 					</div>
-					<div className="project-">
+					<div className="project-details">
 						<h1 className="title">{title}</h1>
 						<h2 className="date text-secondary">{date}</h2>
 						<p>{description}</p>
+						<div className="project-links">
+							<a target="_blank" rel="noopener noreferrer" href={link} className="project-link">
+								View Project
+							</a>
+							{git && (
+								<a className="git" href={git} target="_blank" rel="noopener noreferrer">
+									<FaGithub />
+								</a>
+							)}
+						</div>
 					</div>
-					<a href={link} className="project-link">
-						LINK
-					</a>
 				</div>
 			</div>
 		);

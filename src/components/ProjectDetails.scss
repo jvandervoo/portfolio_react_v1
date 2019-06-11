@@ -6,6 +6,15 @@
 	display: flex;
 	padding: 2rem;
 	background: lighten($primary-color, 5);
+	.project-details {
+		display: flex;
+		flex-direction: column;
+
+		p {
+			margin-top: 0;
+			margin-bottom: 2rem;
+		}
+	}
 	@include breakMd {
 		flex-direction: column;
 		padding-left: 1rem;
@@ -19,6 +28,11 @@
 		}
 		img {
 			width: 300px;
+			display: block;
+			@include breakMd {
+				width: 100%;
+				max-width: 300px;
+			}
 		}
 	}
 	.title {
@@ -31,5 +45,32 @@
 		line-height: 1em;
 		font-weight: 500;
 		margin-bottom: 2rem;
+	}
+	.project-links {
+		margin-top: auto;
+		box-sizing: border-box;
+		padding: 0.5rem 0rem;
+		display: flex;
+		justify-content: space-between;
+		.project-link {
+			max-width: 200px;
+			width: 100%;
+			background: $secondary-color;
+			color: set-text-color($secondary-color);
+			font-size: 1.5rem;
+			padding: 0.5rem 1rem;
+			box-sizing: border-box;
+			font-weight: 600;
+			text-align: center;
+			&:hover {
+				background: $light;
+				color: set-text-color($light);
+			}
+		}
+		.git {
+			font-size: 2.5rem;
+			display: flex;
+			align-items: center;
+		}
 	}
 }

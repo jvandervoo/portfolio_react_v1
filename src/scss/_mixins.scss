@@ -1,32 +1,32 @@
 @mixin easeOut {
-    transition: all $break;
+	transition: all $break;
 }
 
 @mixin easeOutQuick {
-    transition: all $quick, opacity 0.1s ease;
+	transition: all $quick, opacity 0.1s ease;
 }
 
 //Media Query Mixins
 @mixin breakSm {
-    @media screen and (max-width: 500px) {
-        @content;
-    }
+	@media screen and (max-width: 600px) {
+		@content;
+	}
 }
 
 @mixin breakMd {
-    @media screen and (max-width: 768px) {
-        @content;
-    }
+	@media screen and (max-width: 900px) {
+		@content;
+	}
 }
 
 @mixin breakLg {
-    @media screen and (max-width: 1170px) {
-        @content;
-    }
+	@media screen and (max-width: 1170px) {
+		@content;
+	}
 }
 
 @mixin brealXl {
-    @media screen and (min-width: 1171px) {
-        @content;
-    }
+	@media screen and (min-width: 1171px) {
+		@content;
+	}
 }

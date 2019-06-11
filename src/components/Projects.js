@@ -10,7 +10,6 @@ export class Projects extends Component {
 					My <br />
 					<span className="text-secondary">Work</span>
 				</h1>
-
 				<Projectlist />
 			</main>
 		);
