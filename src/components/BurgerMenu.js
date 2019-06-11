@@ -9,10 +9,20 @@ export class BurgerMenu extends Component {
 			<nav className="menu">
 				<div onClick={toggleMenu} className="menu-wrapper" />
 				<ul key={"blah"} className="menu-nav">
-					<NavItem route="/" displayName="Home" currentRoute={currentRoute} />
-					<NavItem route="/about" displayName="About" currentRoute={currentRoute} />
-					<NavItem route="/projects" displayName="Projects" currentRoute={currentRoute} />
-					<NavItem route="/contact" displayName="Contact" currentRoute={currentRoute} />
+					<NavItem toggleMenu={toggleMenu} route="/" displayName="Home" currentRoute={currentRoute} />
+					<NavItem toggleMenu={toggleMenu} route="/about" displayName="About" currentRoute={currentRoute} />
+					<NavItem
+						toggleMenu={toggleMenu}
+						route="/projects"
+						displayName="Projects"
+						currentRoute={currentRoute}
+					/>
+					<NavItem
+						toggleMenu={toggleMenu}
+						route="/contact"
+						displayName="Contact"
+						currentRoute={currentRoute}
+					/>
 				</ul>
 			</nav>
 		);
