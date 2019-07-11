@@ -4,7 +4,7 @@ import { Route, Switch, withRouter } from "react-router-dom";
 import { About, Home, Projects, BurgerMenu, BurgerMenuButton, ProjectDetails, NotFound } from "./components";
 import BackgroundImage from "./assets/imgs/planes-3.jpg";
 import Contact from "./components/Contact";
-import { CSSTransitionGroup } from "react-transition-group"; // ES6
+import { TransitionGroup } from "react-transition-group"; // ES6
 
 class Main extends Component {
 	constructor(props) {
@@ -35,11 +35,11 @@ class Main extends Component {
 		return (
 			<div>
 				<BurgerMenuButton active={showMenu} toggleMenu={this.toggleMenu} />
-				<CSSTransitionGroup transitionName="example" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
+				<TransitionGroup transitionName="example" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
 					{showMenu && (
 						<BurgerMenu toggleMenu={this.toggleMenu} currentRoute={this.props.location.pathname} />
 					)}
-				</CSSTransitionGroup>
+				</TransitionGroup>
 
 				<div className={`site-wrapper`} style={backgroundStyle}>
 					<Switch>
